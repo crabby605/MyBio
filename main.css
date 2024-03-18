@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #343a40; /* Dark header background */
+    background-color: #FF9780; /* Dark header background */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -26,7 +26,7 @@ header h1 {
 }
 
 nav {
-    background-color: #e9ecef; /* Light navigation background */
+    background-color: #FDFF6A; /* Light navigation background */
     position: sticky;
     top: 0;
     z-index: 1000;
