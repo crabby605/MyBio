@@ -1,11 +1,11 @@
 /* Styles for Vihaan's website */
 
 body {
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: #ffff00; /* Yellow background */
+    background-color: #f0f5f9; /* Light blue background */
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #FF9780; /* Dark header background */
+    background-color: #343a40; /* Dark header background */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -26,7 +26,7 @@ header h1 {
 }
 
 nav {
-    background-color: #FDFF6A; /* Light navigation background */
+    background-color: #e9ecef; /* Light navigation background */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,12 +51,11 @@ nav ul li a {
 }
 
 .section {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for sections */
+    background-color: #fff; /* White background for sections */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
-    transition: background-color 1.2s ease;
 }
 
 footer {
@@ -66,9 +65,16 @@ footer {
     padding: 10px 0;
 }
 
-
-
 /* Active section highlight */
 .active-section {
-    background-color: #ffffff; /* White background for active section */
+    background-color: #f0f0f0; /* Light gray background for active section */
+}
+
+/* Cat image */
+#cat {
+    position: fixed;
+    pointer-events: none; /* Make the cat image not interfere with mouse events */
+    z-index: 1000; /* Make sure the cat image stays on top */
+    width: 50px; /* Adjust size as needed */
+    height: auto;
 }
