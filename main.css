@@ -1,12 +1,21 @@
 /* Styles for Vihaan's website */
 
 body {
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: #f0f5f9; /* Light blue background */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background: /* Use a linear gradient for the wave effect */
+    linear-gradient(
+      to right,
+      yellow 0%,
+      yellow 50%,
+      blue 50%,
+      blue 100%
+    );
+  background-repeat: repeat-x; /* Repeat the wave pattern horizontally */
 }
+
 
 .container {
     max-width: 960px;
