@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Navigation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<style>
+  /* CSS Styles */
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .game {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  .game img {
+    width: 256px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .game .play-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .game .play-button:hover {
+    background-color: #0056b3;
+  }
+  .game .title {
+    flex: 1;
+    margin-left: 20px;
+  }
+  .game .title h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  .game .description {
+    flex: 2;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Game Navigation</h1>
+  <div class="game">
+    <img src="game1.jpg" alt="Game 1">
+    <button class="play-button" onclick="startGame('game1')">Play</button>
+    <div class="title">
+      <h2>Game 1</h2>
+    </div>
+    <div class="description">
+      This is the description for Game 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+  </div>
+  <div class="game">
+    <img src="game2.jpg" alt="Game 2">
+    <button class="play-button" onclick="startGame('game2')">Play</button>
+    <div class="title">
+      <h2>Game 2</h2>
+    </div>
+    <div class="description">
+      This is the description for Game 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+  </div>
+  <!-- Add more games here -->
+</div>
+
+<script>
+  // JavaScript functions
+  function startGame(gameId) {
+    // You can define actions for starting each game here
+    alert("Starting " + gameId);
+  }
+</script>
+
+</body>
+</html>
