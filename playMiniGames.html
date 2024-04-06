@@ -75,23 +75,23 @@
 <div class="container">
   <h1>Game Navigation</h1>
   <div class="game">
-    <img src="game1.jpg" alt="Game 1">
-    <button class="play-button" onclick="startGame('game1')">Play</button>
+    <img src="game1.jpg" alt="Chrome Dino in JS">
+    <button class="play-button" onclick="startGame('game1')">PlayDino</button>
     <div class="title">
       <h2>Game 1</h2>
     </div>
     <div class="description">
-      This is the description for Game 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      the classic chrome dino in js is here to play online.
     </div>
   </div>
   <div class="game">
-    <img src="game2.jpg" alt="Game 2">
-    <button class="play-button" onclick="startGame('game2')">Play</button>
+    <img src="game2.jpg" alt="flappy birb in JS">
+    <button class="play-button" onclick="startGame('game2')">PlayBirb</button>
     <div class="title">
       <h2>Game 2</h2>
     </div>
     <div class="description">
-      This is the description for Game 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      no need to say
     </div>
   </div>
   <!-- Add more games here -->
@@ -100,8 +100,12 @@
 <script>
   // JavaScript functions
   function startGame(gameId) {
-    // You can define actions for starting each game here
+    
     alert("Starting " + gameId);
+     document.getElementById('PlayDino').addEventListener('click', function() {
+    window.location.href = 'Dino.html';
+        document.getElementById('PlayBirb').addEventListener('click', function() {
+    window.location.href = 'Birb.html';
   }
 </script>
 
