@@ -6,61 +6,82 @@
     <title>Vihaan's Corner</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
 </head>
 <body>
-    <header>
-        <h1>Vihaan's Corner</h1>
-        <p>Welcome to Vihaan's World!</p>
-    </header>
+ 
 
-    <nav>
+    <nav class="container">
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#social">Social Media</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#learning">Learning Journey</a></li>
-            <li><a href="gamepage">Game page</a></li>
+            <li><a href="gamepage.html">Game Page</a></li>
         </ul>
     </nav>
 
-    <section id="about">
-        <h2>           About Me</h2>
-        <p>            Name: Vihaan</p>
-        <p>            Age: 15</p>
-        <p>            Date of Birth: November 01, 2008</p>
-        
-       <p>    i play minecraft and know java and python</p>
-    </section>
+    <main class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            
+            <p>my name is vihaan popularly known as crabby on the internet i also play games so come on if u wanna join me i play Minecraft,Valorant,Fortnite,and bit more of these and i know Java and JavaScript im also a huge android fan wish me on 1st of november and if u have read so far visit my game page</p>
+        </section>
 
-    <section id="social">
-        <h2>            Social Media</h2>
-        <ul>
-            <li><a href="https://www.instagram.com/Vihaan.pi">    Instagram</a></li>
-            <li><a href="https://www.reddit.com/user/Crabby605">    Reddit</a></li>
-            <li><a href="https://github.com/Crabby605">    GitHub</a></li>
-            <li>    Discord: crabbypattyboi</li>
-        </ul>
-    </section>
+        <section id="social" class="section">
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/Vihaan.pi">Instagram</a></li>
+                <li><a href="https://www.reddit.com/user/Crabby605">Reddit</a></li>
+                <li><a href="https://github.com/Crabby605">GitHub</a></li>
+                <li><a href="https://www.discord.com/users/971263636825866250">Discord</a></li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2>        Projects</h2>
-        <p><a href="https://github.com/Crabby605">GitHub Repository</a> - Check out some of my coding projects on GitHub!</p>
-        <p><a href="https://www.reddit.com/user/Crabby605">Reddit</a> - Join me in discussions on various topics over on Reddit!</p>
-    </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p><a href="https://github.com/Crabby605">GitHub Repository</a> - Check out some of my coding projects!</p>
+            <p><a href="https://www.reddit.com/user/Crabby605">Reddit</a> - Join me for discussions on various topics!</p>
+        </section>
 
-    <section id="learning">
-        <h2>Learning Journey</h2>
-        <p>I'm currently delving into the exciting world of Linux. If you have any resources or recommendations, feel free to share them with me!</p>
-    </section>
-
-    <footer>
+        <section id="learning" class="section">
+            <h2>Learning Journey</h2>
+            <p>im currently learning SQL and linux so if you have any tips
+          share them with me on my social media accounts or here vihaanpingalkar4@proton.me</p>
+        </section>
+    </main>
+<section id="love" class="section">
+  <body>
+      <p>
+    <blockquote>Made With ❤️ by Vihaan</blockquote></p>
+  </body></section>
+    <footer class="container">
         <p>© 2024 Vihaan's Corner. All rights reserved.</p>
     </footer>
-
+    <script>src="buttonlit.js"</script>
     <script src="script.js"></script>
-    <script src="./oneko.js"></script>
+    <script src="oneko.js"></script>
+  <script>
+        const body = document.body;
+        const btn = document.getElementById('dark-mode-btn');
+
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            btn.classList.toggle('active');
+        });
+
+        body.addEventListener('mousedown', (event) => {
+            const circle = document.createElement('div');
+            circle.classList.add('highlight');
+            circle.style.left = event.clientX + 'px';
+            circle.style.top = event.clientY + 'px';
+            body.appendChild(circle);
+
+            setTimeout(() => {
+                circle.remove();
+            }, 200);  // How long the highlight lasts (in milliseconds)
+        });
+    </script>
 </body>
 </html>
-

@@ -1,89 +1,101 @@
-/* Styles for Vihaan's website */
-
-body {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: /* Use a linear gradient for the wave effect */
-    linear-gradient(
-      to right,
-      yellow 0%,
-      yellow 50%,
-      blue 50%,
-      blue 100%
-    );
-  background-repeat: repeat-x; /* Repeat the wave pattern horizontally */
-}
-
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    background-color: #343a40; /* Dark header background */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
+/* CSS Variables for Custom Colors */
+:root {
+    --header-bg-color: #343a40; /* Dark header background */
+    --header-text-color: #ffffff; /* White text for header */
+  
+    --nav-bg-color: #0d113d; /* Dark navigation background */
+    --nav-text-color: #f5206e; /* Pink navigation text color */
+    --nav-hover-color: white; /* White text color on hover */
+  
+    --section-bg-color: #0d113d; /* Pink background for sections */
+    --section-text-color: #f5206e; /* White text for sections */
+  
+    --footer-bg-color: #0d113d; /* Dark footer background */
+    --footer-text-color: #f5206e; /* White text for footer */
+    --body-bg-color: #0d113d; /* Light gray background for body */
+  }
+  
+  /* General Styling */
+  body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-}
-
-nav {
-    background-color: #e9ecef; /* Light navigation background */
-    position: sticky;
+    padding: 0;
+    overflow-x: hidden;
+    background: var(--body-bg-color);
+  }
+  
+  /* Container for centering content with side margins */
+  .container {
+    max-width: 960px; /* Limit width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Consistent padding */
+    padding-left: 40px; /* Side margin */
+    padding-right: 40px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1rem; /* Larger font size */
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: var(--nav-bg-color);
+    position: sticky; /* Keeps nav fixed at the top */
     top: 0;
     z-index: 1000;
-}
-
-nav ul {
-    list-style-type: none;
+  }
+  
+  nav ul {
+    list-style: none; /* No bullet points */
     margin: 0;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+    padding: 10px;
+    text-align: center; /* Center-align nav links */
+  }
+  
+  nav ul li {
+    display: inline-block; /* Keep nav items inline */
+    margin-right: 20px; /* Spacing between nav items */
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.section {
-    background-color: #fff; /* White background for sections */
+    color: var(--nav-text-color); /* Nav text color */
+    font-weight: bold; /* Emphasize links */
+    transition: color 0.3s, background-color 0.3s; /* Smooth hover effect */
+  }
+  
+  nav ul li a:hover {
+    color: var(--nav-hover-color); /* Change text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+  }
+  
+  /* Section styling */
+  .section {
+    background-color: var(--section-bg-color); /* Customizable section background */
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for sections */
-}
-
-footer {
-    background-color: #343a40; /* Dark footer background */
-    color: #fff;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: var(--section-text-color); /* Section text color */
+    padding-left: 40px; /* Consistent side padding */
+    padding-right: 40px;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: var(--footer-bg-color); /* Footer background */
+    color: var(--footer-text-color); /* Footer text color */
     text-align: center;
-    padding: 10px 0;
-}
-
-/* Active section highlight */
-.active-section {
-    background-color: #f0f0f0; /* Light gray background for active section */
-}
-
-/* Cat image */
-#cat {
-    position: fixed;
-    pointer-events: none; /* Make the cat image not interfere with mouse events */
-    z-index: 1000; /* Make sure the cat image stays on top */
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-}
+    padding: 10px; /* Padding for footer */
+  }
+  
+  
+  
