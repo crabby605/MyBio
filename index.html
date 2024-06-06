@@ -71,6 +71,54 @@
     <footer class="container">
         <p>© 2024 Vihaan's Corner. All rights reserved.</p>
     </footer>
+<script>    var loggedData = [];
+
+function logData() {
+    var deviceInfo = {
+        ipAddress: '',
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        battery: 'Battery information not supported'
+    };
+
+    // Get IP address
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            deviceInfo.ipAddress = data.ip;
+            console.log("IP Logged: " + deviceInfo.ipAddress);
+            saveToGitHub(deviceInfo);
+        });
+
+    // Get battery information if supported
+    if (navigator.getBattery) {
+        navigator.getBattery().then(function(battery) {
+            deviceInfo.battery = {
+                level: battery.level,
+                charging: battery.charging,
+                chargingTime: battery.chargingTime,
+                dischargingTime: battery.dischargingTime
+            };
+            console.log("Battery Info: ", deviceInfo.battery);
+        });
+    }
+}
+
+function saveToGitHub(data) {
+    var jsonData = JSON.stringify(data);
+    var base64Data = btoa(jsonData);
+    var content = base64Data + '\n';
+
+    var blob = new Blob([content], { type: 'text/plain' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'logged_data.txt';
+    a.click();
+}
+
+logData();
+</script>
     <script>src="buttonlit.js"</script>
     <script src="script.js"></script>
     <script src="oneko.js"></script>
