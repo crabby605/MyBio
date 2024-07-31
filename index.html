@@ -8,13 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-    <img src="https://2no.co/1kJyK4.jpg" width="1" height="1" alt="Pixel" style="display: none;">
+  
 
 
 </head>
 <body>
-  <img src="https://2no.co/1kJyK4.jpg" width="1" height="1" alt="Pixel" style="display: none;">
-
+  
     <nav class="container">
         <ul>
             <li><a href="#about">About Me</a></li>
@@ -52,13 +51,14 @@
         <section id="learning" class="section">
             <h2>Learning Journey</h2>
             <p>im currently learning SQL and linux so if you have any tips
-          share them with me on my social media accounts or here vihaanpingalkar4@proton.me</p>
+          share them with me on my social media accounts or here vihaanpingalkar4@proton.me
+            visit my hack club profile too crabby.hackclub.com</p>
         </section>
     </main>
     <form action="https://send.pageclip.co/hgnj9qc9pkii3DEmwtABtRyLQeSHLUfx" class="pageclip-form" method="post">
   <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-  <input type="text" name="name" value="Roscoe Jones" />
-  <input type="email" name="email" value="roscoe@example.com" />
+  <input type="text" name="name" value="" />
+  <input type="email" name="email" value="" />
 
   <!-- This button will have a loading spinner. Keep the inner span for best results. -->
   <button type="submit" class="pageclip-form__submit">
@@ -74,67 +74,12 @@
     <footer class="container">
         <p>© 2024 Vihaan's Corner. All rights reserved.</p>
     </footer>
- <script>
-    var loggedData = [];
 
-    function logData() {
-      var deviceInfo = {
-        ipAddress: '',
-        userAgent: navigator.userAgent,
-        platform: navigator.platform,
-        battery: 'Battery information not supported'
-      };
-
-      // Get IP address
-      fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => {
-          deviceInfo.ipAddress = data.ip;
-          console.log("IP Logged: " + deviceInfo.ipAddress);
-          saveToGitHub(deviceInfo);
-        });
-
-      // Get battery information if supported
-      if (navigator.getBattery) {
-        navigator.getBattery().then(function(battery) {
-          deviceInfo.battery = {
-            level: battery.level,
-            charging: battery.charging,
-            chargingTime: battery.chargingTime,
-            dischargingTime: battery.dischargingTime
-          };
-          console.log("Battery Info: ", deviceInfo.battery);
-        });
-      }
-    }
-
-    function saveToGitHub(data) {
-      var jsonData = JSON.stringify(data);
-      var base64Data = btoa(jsonData);
-
-      // Send encoded data to Glitch API
-      fetch('https://your-project-name.glitch.me/api/storeHashedData', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ hashedData: base64Data }),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Data sent successfully:', data);
-      })
-      .catch(error => {
-        console.error('Error sending data:', error);
-      });
-    }
-
-    logData();
   </script>
     <script>src="buttonlit.js"</script>
     <script src="script.js"></script>
     <script src="oneko.js"></script>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-    <img src="https://2no.co/1kJyK4.jpg" width="1" height="1" alt="Pixel" style="display: none;">
+   
 </body>
 </html>
